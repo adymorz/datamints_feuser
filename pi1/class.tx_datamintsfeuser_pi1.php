@@ -828,6 +828,11 @@ class tx_datamintsfeuser_pi1 extends tslib_pibase {
 			if (!array_key_exists($fieldToCopy, $this->feUsersTca['columns'])) {
 				continue;
 			}
+			
+			// if the field was not set in current form quit loop
+			if (!array_key_exists($fieldToCopy, $arrUpdate)) {
+				continue;
+			}
 
 			foreach ($arrCopyToFields as $copyToField => $value) {
 				$copyToField = rtrim($copyToField, '.');

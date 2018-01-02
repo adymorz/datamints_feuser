@@ -1245,6 +1245,7 @@ class tx_datamintsfeuser_pi1 extends tslib_pibase {
 
 			// Ausgabe vorbereiten.
 			$submode = 'deleted';
+			$params = array('mode' => 'userdelete');
 		}
 
 		return $this->showMessageOutputRedirect($mode, $submode, $params);
